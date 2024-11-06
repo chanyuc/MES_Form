@@ -33,6 +33,22 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             InitializeComboBox();
+            this.KeyDown += new KeyEventHandler(DailyReportCreate_KeyDown);
+            this.KeyPreview = true; // Ensure the form receives key events
+        }
+
+        private void DailyReportCreate_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Prevent the default action
+                SubmitButton.PerformClick(); // Trigger the submit button click
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                e.SuppressKeyPress = true; // Prevent the default action
+                CreateCancel.PerformClick(); // Trigger the cancel button click
+            }
         }
 
         private void InitializeComboBox()
@@ -75,7 +91,7 @@ namespace WinFormsApp1
             DateTime endTime = EndTimePicker.Value;
             TimeSpan elapsedTime = endTime - startTime;
 
-            DateData = DateTimePicker.Value.ToString("yyyy-MM-dd");
+            DateData = DateTimePicker.Value.ToString("MM/dd/yyyy");
             ShiftData = ShiftComboBox.SelectedItem.ToString();
             LineData = LineComboBox.SelectedItem.ToString();
             StationData = StationTextBox.Text.ToString();

@@ -31,19 +31,18 @@
             this.components = new System.ComponentModel.Container();
             this.AssetListTab = new System.Windows.Forms.TabControl();
             this.PPCTab = new System.Windows.Forms.TabPage();
-            this.IPCTab = new System.Windows.Forms.TabPage();
-            this.PrinterTab = new System.Windows.Forms.TabPage();
-
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IPCTab = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.PrinterTab = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-
             this.AddAssetButton = new System.Windows.Forms.Button();
             this.RemoveAssetButton = new System.Windows.Forms.Button();
             this.AssetActionNotification = new System.Windows.Forms.Label();
             this.AssetImportButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.rowCountLabel = new System.Windows.Forms.Label();
+            this.ModifyAssetButton = new System.Windows.Forms.Button();
             this.AssetListTab.SuspendLayout();
             this.PPCTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -139,7 +138,7 @@
             // 
             // RemoveAssetButton
             // 
-            this.RemoveAssetButton.Location = new System.Drawing.Point(100, 12);
+            this.RemoveAssetButton.Location = new System.Drawing.Point(181, 12);
             this.RemoveAssetButton.Name = "RemoveAssetButton";
             this.RemoveAssetButton.Size = new System.Drawing.Size(75, 23);
             this.RemoveAssetButton.TabIndex = 2;
@@ -173,16 +172,27 @@
             // rowCountLabel
             // 
             this.rowCountLabel.AutoSize = true;
-            this.rowCountLabel.Location = new System.Drawing.Point(668, 435);
+            this.rowCountLabel.Location = new System.Drawing.Point(511, 434);
             this.rowCountLabel.Name = "rowCountLabel";
             this.rowCountLabel.Size = new System.Drawing.Size(0, 15);
             this.rowCountLabel.TabIndex = 5;
+            // 
+            // ModifyAssetButton
+            // 
+            this.ModifyAssetButton.Location = new System.Drawing.Point(100, 12);
+            this.ModifyAssetButton.Name = "ModifyAssetButton";
+            this.ModifyAssetButton.Size = new System.Drawing.Size(75, 23);
+            this.ModifyAssetButton.TabIndex = 6;
+            this.ModifyAssetButton.Text = "Edit";
+            this.ModifyAssetButton.UseVisualStyleBackColor = true;
+            this.ModifyAssetButton.Click += new System.EventHandler(this.ModifyAssetButton_Click);
             // 
             // AssetListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ModifyAssetButton);
             this.Controls.Add(this.rowCountLabel);
             this.Controls.Add(this.AssetImportButton);
             this.Controls.Add(this.AssetActionNotification);
@@ -218,5 +228,6 @@
         private Button AssetImportButton;
         private System.Windows.Forms.Timer timer1;
         private Label rowCountLabel;
+        private Button ModifyAssetButton;
     }
 }

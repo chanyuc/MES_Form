@@ -36,6 +36,7 @@
             this.LoadButton = new System.Windows.Forms.Button();
             this.NotificationLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.rowCountLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,6 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(776, 341);
             this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // SaveButton
             // 
@@ -103,11 +103,20 @@
             // 
             this.timer1.Interval = 5000;
             // 
+            // rowCountLabel
+            // 
+            this.rowCountLabel.AutoSize = true;
+            this.rowCountLabel.Location = new System.Drawing.Point(670, 431);
+            this.rowCountLabel.Name = "rowCountLabel";
+            this.rowCountLabel.Size = new System.Drawing.Size(0, 15);
+            this.rowCountLabel.TabIndex = 13;
+            // 
             // DailyReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rowCountLabel);
             this.Controls.Add(this.NotificationLabel);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.SaveButton);
@@ -130,5 +139,6 @@
         private Button LoadButton;
         private Label NotificationLabel;
         private System.Windows.Forms.Timer timer1;
+        private Label rowCountLabel;
     }
 }
